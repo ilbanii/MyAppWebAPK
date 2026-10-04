@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت نام</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        برنامه من
+    </div>
+
+    <h1>ثبت نام</h1>
+
+    <input 
+        type="tel" 
+        id="phone" 
+        placeholder="شماره تلفن">
+
+    <input 
+        type="password" 
+        id="password" 
+        placeholder="رمز عبور">
+
+    <button onclick="register()">
+        ثبت نام
+    </button>
+    <p>
+        قبلاً ثبت نام کرده‌اید؟
+    </p>
+
+    <button onclick="goLogin()">
+        ورود به حساب
+    </button>
+
+    <p id="message"></p>
+
+</div>
+
+<script>
+    if (localStorage.getItem("registered") === "true") {
+        window.location.href = "home.html";
+    }
+</script>
+
+<script>
+
+if (localStorage.getItem("loggedIn") === "true") {
+
+    window.location.href = "home.html";
+
+} else if (localStorage.getItem("registered") === "true") {
+
+    window.location.href = "login.html";
+
+}
+
+</script>
+
+<script src="app.js?v=2"></script>
+
+</body>
+</html>
